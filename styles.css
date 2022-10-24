@@ -1,4 +1,56 @@
-.top {
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color:rgb(37, 114, 114);
+    height: 20vh;
+    display:flexbox;
+    
+    
+}
+
+.navbar1 {
+    background-color: #049a86;
+    height:60%;
+    
+}
+
+.navbar2 {
     background-color: aqua;
-    padding: 20px;
+    height: 40%;
+}
+
+.reclame {
+    display: flex;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+}
+
+.primul-mesaj, .nr-telefon, .contact, .reclamatii {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+}
+.primul-mesaj {
+    flex:40%;
+
+}
+
+
+.nr-telefon {
+    flex:30%;
+}
+
+.reclamatii {
+    flex:20%;
+}
+
+.contact {
+    flex:10%;
 }
