@@ -27,23 +27,29 @@
     height: 100%;
     margin-left: 5%;
     margin-right: 5%;
+    color: aliceblue;
+    
     
 }
 
 .primul-mesaj, .nr-telefon, .contact, .reclamatii {
     display: flex;
-    justify-content: center;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.25rem;
 }
 .primul-mesaj {
+    text-align: end;
     flex:40%;
+    
 
 }
 
-
+.nr-telefon, .reclamatii,.contact {
+    justify-content: right;
+}
 .nr-telefon {
+    
     flex:30%;
 }
 
@@ -54,3 +60,9 @@
 .contact {
     flex:10%;
 }
+
+a:hover {
+    color:yellow;
+    cursor: pointer;
+}
+
