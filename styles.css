@@ -4,11 +4,8 @@
 }
 
 .header {
-    background-color:rgb(37, 114, 114);
     height: 20vh;
     display:flexbox;
-    
-    
 }
 
 .navbar1 {
@@ -18,10 +15,9 @@
 }
 
 .navbar2 {
-    background-color: aqua;
     height: 40%;
 }
-
+/*    Reclamele              */
 .reclame {
     display: flex;
     height: 100%;
@@ -37,6 +33,7 @@
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.25rem;
+    cursor: pointer;
 }
 .primul-mesaj {
     text-align: end;
@@ -60,9 +57,3 @@
 .contact {
     flex:10%;
 }
-
-a:hover {
-    color:yellow;
-    cursor: pointer;
-}
-
