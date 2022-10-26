@@ -4,11 +4,8 @@
 }
 
 .header {
-    background-color:rgb(37, 114, 114);
     height: 20vh;
     display:flexbox;
-    
-    
 }
 
 .navbar1 {
@@ -18,10 +15,9 @@
 }
 
 .navbar2 {
-    background-color: aqua;
     height: 40%;
 }
-
+/*    Reclamele              */
 .reclame {
     display: flex;
     height: 100%;
@@ -36,6 +32,7 @@
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.25rem;
+    cursor: pointer;
 }
 .primul-mesaj {
     flex:40%;
@@ -54,3 +51,52 @@
 .contact {
     flex:10%;
 }
+.primul-mesaj:hover, .nr-telefon:hover, .contact:hover, .reclamatii:hover{
+    color: red;
+}
+
+
+/*          Tipurile de meniuri            */
+.tipuri_meniuri{
+    display: flex;
+    height: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.pizza, .paste, .salate, .desert, .bauturi, .promotii, .taxa, .conectare {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Copperplate', fantasy;
+        font-size: 1rem;
+        color: rgb(111, 229, 56);
+        cursor: pointer;
+}
+.pizza{
+    flex: 12.5%;
+}
+.paste{
+    flex: 12.5%;
+}
+.salate{
+    flex: 12.5%;
+}
+.desert{
+    flex: 12.5%;
+}
+.bauturi{
+    flex: 12.5%;
+}
+.promotii{
+    flex: 12.5%;
+}
+.taxa{
+    flex: 12.5%;
+}
+.conectare{
+    flex: 12.5%;
+}
+.pizza:hover, .paste:hover, .salate:hover, .desert:hover, .bauturi:hover, .promotii:hover, .taxa:hover, .conectare:hover{
+    color: red;
+}
+
