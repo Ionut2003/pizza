@@ -1,66 +1,64 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .header {
-    height: 20vh;
-    display:flexbox;
+  height: 20vh;
+  display: flexbox;
 }
 
 .navbar1 {
-    background-color: #049a86;
-    height:60%;
-
+  background-color: #049a86;
+  height: 60%;
 }
 
 .navbar2 {
-    height: 40%;
+  height: 40%;
 }
 
 .reclame {
-    display: flex;
-    height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
-
+  display: flex;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-.primul-mesaj, .nr-telefon, .contact, .reclamatii {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.25rem;
-    cursor: pointer;
+.primul-mesaj,
+.nr-telefon,
+.contact,
+.reclamatii {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 .primul-mesaj {
-    flex:40%;
-
+  flex: 40%;
 }
 
-
 .nr-telefon {
-    flex:30%;
+  flex: 30%;
 }
 
 .reclamatii {
-    flex:20%;
+  flex: 20%;
 }
 
 .contact {
-    flex:10%;
+  flex: 10%;
 }
 .primul-mesaj:hover, .nr-telefon:hover, .contact:hover, .reclamatii:hover{
     color: yellow;
 }
 
-
-.tipuri_meniuri{
-    display: flex;
-    height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
+.tipuri_meniuri {
+  display: flex;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .pizza, .paste, .salate, .desert, .bauturi, .promotii, .taxa, .conectare {
         display: flex;
