@@ -1,63 +1,115 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .header {
-    background-color:rgb(37, 114, 114);
-    height: 20vh;
-    display:flexbox;
-    
-    
+  height: 20vh;
+  display: flexbox;
 }
 
 .navbar1 {
-    background-color: #049a86;
-    height:60%;
-    
+  background-color: #049a86;
+  height: 60%;
 }
 
 .navbar2 {
-    background-color: rgb(236, 240, 179);
-    height: 40%;
+  height: 40%;
 }
 
-.reclame, .continut  {
-    display: flex;
-    height: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
-    
+.reclame {
+  display: flex;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
-.primul-mesaj, .nr-telefon, .contact, .reclamatii, .pizza, .paste, .salate, .desert, .bauturi{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1.25rem;
+.primul-mesaj,
+.nr-telefon,
+.contact,
+.reclamatii {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.25rem;
+  cursor: pointer;
 }
 .primul-mesaj {
-    flex:40%;
-
+  flex: 40%;
 }
 
-
 .nr-telefon {
-    flex:30%;
+  flex: 30%;
 }
 
 .reclamatii {
-    flex:20%;
+  flex: 20%;
 }
 
 .contact {
-    flex:10%;
+  flex: 10%;
+}
+.primul-mesaj:hover,
+.nr-telefon:hover,
+.contact:hover,
+.reclamatii:hover {
+  color: red;
 }
 
-.pizza , .paste, .salate, .desert, .bauturi{
-    flex : 5%;
-    color: black;
-    
+.tipuri_meniuri {
+  display: flex;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
-
+.pizza,
+.paste,
+.salate,
+.desert,
+.bauturi,
+.promotii,
+.taxa,
+.conectare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Copperplate", fantasy;
+  font-size: 1rem;
+  color: rgb(111, 229, 56);
+  cursor: pointer;
+}
+.pizza {
+  flex: 12.5%;
+}
+.paste {
+  flex: 12.5%;
+}
+.salate {
+  flex: 12.5%;
+}
+.desert {
+  flex: 12.5%;
+}
+.bauturi {
+  flex: 12.5%;
+}
+.promotii {
+  flex: 12.5%;
+}
+.taxa {
+  flex: 12.5%;
+}
+.conectare {
+  flex: 12.5%;
+}
+.pizza:hover,
+.paste:hover,
+.salate:hover,
+.desert:hover,
+.bauturi:hover,
+.promotii:hover,
+.taxa:hover,
+.conectare:hover {
+  color: red;
+}
