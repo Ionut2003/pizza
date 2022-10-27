@@ -52,7 +52,7 @@
     flex:10%;
 }
 .primul-mesaj:hover, .nr-telefon:hover, .contact:hover, .reclamatii:hover{
-    color: red;
+    color: yellow;
 }
 
 
@@ -64,6 +64,7 @@
 }
 .pizza, .paste, .salate, .desert, .bauturi, .promotii, .taxa, .conectare {
         display: flex;
+        flex:12.5%;
         justify-content: center;
         align-items: center;
         font-family: 'Copperplate', fantasy;
@@ -71,30 +72,7 @@
         color: rgb(111, 229, 56);
         cursor: pointer;
 }
-.pizza{
-    flex: 12.5%;
-}
-.paste{
-    flex: 12.5%;
-}
-.salate{
-    flex: 12.5%;
-}
-.desert{
-    flex: 12.5%;
-}
-.bauturi{
-    flex: 12.5%;
-}
-.promotii{
-    flex: 12.5%;
-}
-.taxa{
-    flex: 12.5%;
-}
-.conectare{
-    flex: 12.5%;
-}
+
 .pizza:hover, .paste:hover, .salate:hover, .desert:hover, .bauturi:hover, .promotii:hover, .taxa:hover, .conectare:hover{
     color: red;
 }
