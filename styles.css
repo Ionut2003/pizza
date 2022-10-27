@@ -18,11 +18,11 @@
 }
 
 .navbar2 {
-    background-color: aqua;
+    background-color: rgb(236, 240, 179);
     height: 40%;
 }
 
-.reclame {
+.reclame, .continut  {
     display: flex;
     height: 100%;
     margin-left: 5%;
@@ -30,7 +30,7 @@
     
 }
 
-.primul-mesaj, .nr-telefon, .contact, .reclamatii {
+.primul-mesaj, .nr-telefon, .contact, .reclamatii, .pizza, .paste, .salate, .desert, .bauturi{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,3 +54,10 @@
 .contact {
     flex:10%;
 }
+
+.pizza , .paste, .salate, .desert, .bauturi{
+    flex : 5%;
+    color: black;
+    
+}
+
