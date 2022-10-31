@@ -97,21 +97,24 @@
 
 .main {
   display: flex;
+  /* justify-content: space-between; */
   flex-wrap: wrap;
   height: 100vh;
-
+  background-color: cadetblue;
 }
 
 .pagina {
   width: 100%;
   height: 100%;
 }
-
-#pizza{
-  display: flex;
-  background-color: cadetblue;
-}
 #paste, #salate, #desert,#bauturi,#promotii,#taxa,#conectare {
   background-color: rgb(150, 127, 79);
   display: none;
 }
+ .pizza{
+  width: 21.25%;
+  height: 100px;
+  margin-top: 7%;
+  margin-left: 3%;
+  /* margin-right: 3%; */
+} 
