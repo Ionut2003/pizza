@@ -1,7 +1,16 @@
 const buttons = document.getElementsByClassName('button');
-var globalVar;
 buttons[0].addEventListener('click', (e) =>{
-    window.location.href = "pizza.html";  
-
+    window.location.href = "pizza.html";    
 })
-console.log(document.getElementsByName("pizza").clientWidth);
+buttons[1].addEventListener('click', (e) =>{
+    window.location.href = "paste.html";    
+})
+buttons[2].addEventListener('click', (e) =>{
+    window.location.href = "salate.html";    
+})
+buttons[3].addEventListener('click', (e) =>{
+    window.location.href = "desert.html";    
+})
+buttons[4].addEventListener('click', (e) =>{
+    window.location.href = "bauturi.html";    
+})
