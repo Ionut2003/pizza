@@ -1,22 +1,22 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.header {
-  height: 20vh;
-  display: flexbox;
-}
+
 
 .navbar1 {
-  background-color: #049a86;
-  height: 60%;
+  background-color: #C4E9BC;
+  height: 12vh;
 }
 
 .navbar2 {
-  height: 40%;
+  position: sticky;
+  top:0px;
+  height: 8vh;
   color: rgb(230, 209, 141);
-  background-color: cadetblue;
+  background-color:#FAB877;
 }
 
 .reclame {
