@@ -1,16 +1,26 @@
 const buttons = document.getElementsByClassName('button');
+
+let firstLoad = true;
+
+if(firstLoad)
+{
+    $("#view").load("pizza.html");
+    firstLoad = false;
+}
+
 buttons[0].addEventListener('click', (e) =>{
-    window.location.href = "pizza.html";    
+    $("#view").load("pizza.html"); 
 })
+        
 buttons[1].addEventListener('click', (e) =>{
-    window.location.href = "paste.html";    
+    $("#view").load("paste.html");    
 })
 buttons[2].addEventListener('click', (e) =>{
-    window.location.href = "salate.html";    
+    $("#view").load("salate.html");     
 })
 buttons[3].addEventListener('click', (e) =>{
-    window.location.href = "desert.html";    
+    $("#view").load("desert.html");     
 })
 buttons[4].addEventListener('click', (e) =>{
-    window.location.href = "bauturi.html";    
+    $("#view").load("bauturi.html");    
 })
