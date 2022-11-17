@@ -9,7 +9,7 @@
 
 .navbar1 {
   background-color: #C4E9BC;
-  height: 12vh;
+  height: 6vh;
 }
 
 .navbar2 {
@@ -122,6 +122,10 @@
   margin-left: 1vw;
   margin-right: 1vw;
   text-align: center;
+}
+
+.container:hover {
+  opacity: 0.7;
 }
  .pizza{
   width: 100%;
@@ -267,4 +271,6 @@ a:link {
 
   color: #f6aa1c;
 }
+
+
 
