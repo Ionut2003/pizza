@@ -8,7 +8,7 @@
 
 
 .navbar1 {
-  background-color: #C4E9BC;
+  background-color: #049a86;
   height: 6vh;
 }
 
@@ -17,7 +17,7 @@
   top:0px;
   height: 8vh;
   color: rgb(230, 209, 141);
-  background-color:#FAB877;
+  background-color:#f9f7e8;
 }
 
 .reclame {
@@ -37,7 +37,7 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 1.25rem;
   cursor: pointer;
-  color: black;
+  color: white;
 }
 .primul-mesaj {
   flex: 40%;
@@ -54,9 +54,6 @@
 .contact {
   flex: 10%;
 }
-.primul-mesaj:hover, #nr-telefon:hover, .contact:hover, .reclamatii:hover{
-    color: rgb(255, 255, 71);
-}
 
 .tipuri-meniuri {
   display: flex;
@@ -65,21 +62,12 @@
 }
 .button {
         display: flex;
-        flex:12.5%;
+        flex:20%;
         justify-content: center;
         align-items: center;
-        font-family: 'Copperplate', fantasy;
-       color: rgb(236, 212, 140);
-        font-size: 1rem;
+        color: #84ba4d;
+        font-size: 1.2rem;
         cursor: pointer;
-}
-
-.button:hover{
-    color: rgb(148, 136, 95);
-    background-color: rgb(238, 233, 170);
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
 }
 
 
@@ -271,6 +259,41 @@ a:link {
 
   color: #f6aa1c;
 }
+
+.hover-animation1,.hover-animation2 {
+  display: inline-block;
+  position: relative;
+}
+
+
+.hover-animation1::after,.hover-animation2::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-animation1::after {
+  background-color: white;
+}
+.hover-animation2::after{
+  background-color: red;
+}
+
+.hover-animation1:hover::after, .hover-animation2:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
+
+
 
 
 
