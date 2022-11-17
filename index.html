@@ -3,41 +3,53 @@
   <head>
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Pizza-Website</title>
   </head>
   <body>
+    <div id="modal">
+      <div id="fereastraReclamatii">
+            <input type="text" id="fname" class="input" name="fname" value placeholder="Numele tau">
+            <input type="text" id="email" class="input" name="email" value placeholder="Email">
+            <input type="text" id="mesaj" class="mesaj" name="mesaj" value placeholder="Mesaj">
+            <input type="submit" id="submit" value="Submit" class="button-submit">
+      </div>
+     </div>
+        
+    </div>  
       <div class="navbar1">
         <div class="reclame">
-          <div class="primul-mesaj">Promotii</div>
-          <div class="nr-telefon">2222.222.222</div>
+          <a class="primul-mesaj" href="#view">Promotii</a>
+          <div id="nr-telefon"><img src="poze\call-icon.svg" width="25px">2222.222.222</span></div>
           <div class="reclamatii">Reclamatii</div>
-          <div class="contact">Contact</div>
+          <a href="#footer" class="contact">Contact</a>
         </div>
       </div>
       <div class="navbar2">
         <div class="tipuri-meniuri">
-          <div class="button">pizza</div>
-          <div class="button">paste</div>
-          <div class="button">salate</div>
-          <div class="button">desert</div>
-          <div class="button">bauturi</div>
+          <a class="button" href ="#view">pizza</a>
+          <a class="button" href ="#view">paste</a>
+          <a class="button" href ="#view">salate</a>
+          <a class="button" href ="#view">desert</a>
+          <a class="button" href ="#view">bauturi</a>
         </div>
       </div>
     <div id="main" class="main">
-      <div id="pizza" class="pagina"></div>
-      <div id="paste" class="pagina"></div>
-      <div id="salate" class="pagina"></div>
-      <div id="desert" class="pagina"></div>
-      <div id="bauturi" class="pagina"></div>
+      <div class="sectiune">
+          <div class="sectiune-conatainer1 ">
+            Bombardier King
+          </div>
       </div>
       <div id="view" class="view">
-
+        </div>
       </div>
     </div>
-    <div class="footer">
-      <div class="despre-noi">Despre Noi</div>
-      <div class="info-utile">Info Utile</div>
-      <div class="vouchere">Vouchere</div>
+  </div>
+    <div id="footer" class="footer">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-linkedin"></a>
+      <a href="#" class="fa fa-instagram"></a>
     </div>
     <script type = "module" src="functions.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
