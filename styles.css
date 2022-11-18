@@ -302,15 +302,16 @@ a:link {
 #cos-cumparaturi {
   top: 17vh;
   left: 15vw;
-  min-width: 70vw;
-  min-height: 70vh;
+  width: 70vw;
+  height: 70vh;
   position: fixed;
-  background-color:rgba(255, 255, 255, 0.667);
+  background-color:white;
   border: 5px solid black;
   z-index: 900;
   display: none;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+ 
 }
 #cos-cumparaturi-icon {
   top: 15vh;
@@ -340,6 +341,29 @@ a:link {
   display: none;
   position: fixed;
   background-color: rgb(219, 146, 146);
+}
+
+.produs {
+  margin-left: 3rem;
+  margin-top: 3rem;
+  height: 5rem;
+  width: 10rem;
+  display: flex;
+}
+
+.img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 1.3rem;
+}
+
+#comanda {
+  width: 7vw;
+  height: 10vh;
+  z-index: 1000;
+  position: fixed;
+  display: none;
+  background-color: red;
 }
 
 
