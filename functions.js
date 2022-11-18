@@ -9,12 +9,36 @@ const butonCos =document.getElementById("cos-cumparaturi-icon");
 const cosCumparaturi = document.getElementById("cos-cumparaturi");
 const inchideCos = document.getElementById("inchide-cos");
 const view = document.getElementById("view");
+const comanda = document.getElementById("comanda");
 let btns={};
 let firstLoad = true;
 let textCopied = false;
 let nrTelefon = "2222.222.222";
+let valoareComanda = 0;
+
+class Produs{
+    nume={};
+    pret={};
+    src={};
+    cantitate=1;
+    constructor(nume,pret,src){
+        this.nume =nume;
+        this.pret = pret;
+        this.src=src;
+    }
 
 
+}
+
+function plaseza_comanda(lista=[]){
+    let fso = CreateObject("Scripting.FileSystemObject");
+    let a =fso.CreateTextFile("./comanda.txt",true);
+    for(let i =0;i<=lista.length;i++)
+    a.Close();
+
+}
+
+let produseInCos = [];
 
 if(firstLoad)
 {
@@ -23,25 +47,35 @@ if(firstLoad)
     btns = document.getElementsByClassName("container");
     
     
+    
 }
 
 
-
-
-
-
+comanda.style.left = cosCumparaturi.style.left + cosCumparaturi.style.width/2 +"vw";
+comanda.style.top= cosCumparaturi.style.top + cosCumparaturi.style.height+"vh";
 
 
 butonCos.addEventListener('click',(e)=>{
     cosCumparaturi.style.display="flex";
     butonCos.style.display="none";
     inchideCos.style.display="flex";
+    comanda.style.display="flex";
 })
 
 inchideCos.addEventListener('click',(e)=>{
     cosCumparaturi.style.display="none";
     butonCos.style.display="flex";
     inchideCos.style.display="none";
+    comanda.style.display="none";
+})
+
+comanda.addEventListener('click',(e)=>{
+    plaseza_comanda(produseInCos);
+    produseInCos.length=0;
+    cosCumparaturi.style.display="none";
+    butonCos.style.display="flex";
+    inchideCos.style.display="none";
+    comanda.style.display="none";
 })
 
 
@@ -75,7 +109,8 @@ buttons[4].addEventListener('click', (e) =>{
     
 })
 promotii[0].addEventListener('click', (e) =>{
-    $("#view").load("pagini/promotii.html");   
+    $("#view").load("pagini/promotii.html");
+    btns = document.getElementsByClassName("container");   
 })
 reclamatii[0].addEventListener('click', (e) =>{
     setTimeout(function() {
@@ -112,19 +147,54 @@ window.onclick = function(event){
     {
         modal.style.display="none";
     }
-}
-
-window.onclick = function(event){
     for(let i=0;i<btns.length;i++)
     {
+        
         let btn = btns[i];
         btn.addEventListener('click',(e)=>{
-            let img = btn.children[0];
-            console.log(img.src);
-        
+            
+                let img = btn.children[0];
+                let nume = btn.children[1].innerHTML;
+                let pret = parseInt(btn.children[2].innerHTML);
+                let fullPath = img.src;
+                let pos = fullPath.indexOf("poze");
+                let partPath = fullPath.slice(pos)
+                let produs = new Produs(nume,pret,partPath);
+                let shouldAppend = true;
+                produseInCos.forEach(function(prod){
+                    if(produs.nume === prod.nume)
+                    shouldAppend = false;
+                })
+
+                if(shouldAppend)
+                {
+                    produseInCos.push(produs);
+                    let cartItem = document.createElement('div');
+                    cartItem.classList.add("produs");
+                    cartItem = `
+                    
+                    <div class="produs">
+                    <img src="${produs.src}" class="img"> 
+                    ${produs.nume}     
+                    ${produs.pret}
+                    <div>
+                    
+                    `;
+                    $("#cos-cumparaturi").append(cartItem);
+                    
+                    
+                }
+                
+             
+                      
         })
 
+             
+        
     }
+    
+    console.log(produseInCos);
 }
+
 
 
