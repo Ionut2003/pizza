@@ -89,7 +89,7 @@ if (mediaQuery.matches) {
 
 if(firstLoad)
 {
-    $("#view").load("pagini/pizza.html");
+    $("#view").load("./pagini/pizza.html");
     firstLoad = false;
     btns = document.getElementsByClassName("container");
     
@@ -125,35 +125,35 @@ comanda.addEventListener('click',(e)=>{
 
 
 buttons[0].addEventListener('click', (e) =>{
-    $("#view").load("pagini/pizza.html"); 
+    $("#view").load("./pagini/pizza.html"); 
     btns = document.getElementsByClassName("container");
     
 
 })
         
 buttons[1].addEventListener('click', (e) =>{
-    $("#view").load("pagini/paste.html"); 
+    $("#view").load("./pagini/paste.html"); 
     btns = document.getElementsByClassName("container");
     
 
 })
 buttons[2].addEventListener('click', (e) =>{
-    $("#view").load("pagini/salate.html");  
+    $("#view").load("./pagini/salate.html");  
     btns = document.getElementsByClassName("container");
     
 })
 buttons[3].addEventListener('click', (e) =>{
-    $("#view").load("pagini/desert.html");  
+    $("#view").load("./pagini/desert.html");  
     btns = document.getElementsByClassName("container");
     
 })
 buttons[4].addEventListener('click', (e) =>{
-    $("#view").load("pagini/bauturi.html");  
+    $("#view").load("./pagini/bauturi.html");  
     btns = document.getElementsByClassName("container");
     
 })
 promotii[0].addEventListener('click', (e) =>{
-    $("#view").load("pagini/promotii.html");
+    $("#view").load("./pagini/promotii.html");
     btns = document.getElementsByClassName("container");   
 })
 reclamatii[0].addEventListener('click', (e) =>{
@@ -202,7 +202,7 @@ window.onclick = function(event){
                 let pret = parseInt(btn.children[2].innerHTML);
                 let fullPath = img.src;
                 let pos = fullPath.indexOf("poze");
-                let partPath = fullPath.slice(pos)
+                let partPath = "./" + fullPath.slice(pos)
                 let produs = new Produs(nume,pret,partPath);
                 let shouldAppend = true;
                 produseInCos.forEach(function(prod){
