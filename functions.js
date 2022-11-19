@@ -42,7 +42,7 @@ if (mediaQuery.matches) {
     const navbar2 = document.getElementsByClassName("navbar2");
     let nav1_touched = false;
     let nav2_touched = false;
-    navbar1[0].addEventListener('click', (e) =>{
+    navbar1[0].addEventListener('touchstart', (e) =>{
         if(nav1_touched == false){
             if (nav2_touched == true){
                 document.getElementsByClassName("tipuri-meniuri")[0].style.display = "none";
@@ -63,7 +63,7 @@ if (mediaQuery.matches) {
             nav1_touched = false;
         }
     });
-    navbar2[0].addEventListener('click', (e) =>{
+    navbar2[0].addEventListener('touchstart', (e) =>{
         if(nav2_touched == false){
             if (nav1_touched == true){
                 document.getElementsByClassName("reclame")[0].style.display = "none";
