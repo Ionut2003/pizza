@@ -9,6 +9,7 @@ const butonCos =document.getElementById("cos-cumparaturi-icon");
 const cosCumparaturi = document.getElementById("cos-cumparaturi");
 const inchideCos = document.getElementById("inchide-cos");
 const view = document.getElementById("view");
+const mediaQuery = window.matchMedia('(max-width: 600px)')
 let btns={};
 let firstLoad = true;
 let textCopied = false;
@@ -112,9 +113,6 @@ window.onclick = function(event){
     {
         modal.style.display="none";
     }
-}
-
-window.onclick = function(event){
     for(let i=0;i<btns.length;i++)
     {
         let btn = btns[i];
@@ -123,8 +121,6 @@ window.onclick = function(event){
             console.log(img.src);
         
         })
-
     }
 }
-
 
