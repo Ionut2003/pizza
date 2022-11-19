@@ -127,11 +127,14 @@
 } 
 .pizza_name{
   margin-top: 9%;
+  color: #d04f4c;
 }
+
 .pret{
   margin-top: 15%;
   margin-bottom: 7%;
   float: right;
+  color: #b83330
 }
 #clipboardNr{
   position: absolute;
@@ -230,8 +233,11 @@
 }
 
 .fa-instagram {
-    background: #125688;
-    color: white;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
 }
 
 
@@ -393,8 +399,27 @@ a:link {
     
   
   }
-  .primul-mesaj, .nr
+  .primul-mesaj, #nr-telefon, .reclamatii, .contact{
+    margin-top: 52%;
+    margin-left: 119%;
+    text-decoration: underline;
+  }
+  .button{
+    margin-top: 86%;
+    margin-left: 231%;
+    text-decoration: underline;
+  }
+  #pizza_button{
+    margin-top: -56%;
+  }
+  a:link{
+    text-decoration: underline;
+  }
+  .primul-mesaj{
+    margin-top: 18%;
+  }
   .navbar2 {
+    background-color: #d04f4c;
     width: 20vw;
     height: 20vw;
     position: fixed;
@@ -425,7 +450,7 @@ a:link {
     border-radius: 50%;
   }
   #backGround{
-    position: absolute;
+    position: fixed;
     background-color: #049a86;
     right: -60vw;
     width: 60vw;
@@ -433,6 +458,19 @@ a:link {
     display: none;
 
   }
+  .container{
+    width: 89.25vw;
+    height: auto;
+    margin-top: 3%;
+    margin-bottom: 3%; 
+    margin-left: 1vw;
+    margin-right: 1vw;
+    text-align: center;
+  }
+  .pizza{
+    width: 100%;
+    height: 53vw;
+  } 
   
 }
 

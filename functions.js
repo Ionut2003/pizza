@@ -40,15 +40,49 @@ let produseInCos = [];
 if (mediaQuery.matches) {
     const navbar1 = document.getElementsByClassName("navbar1");
     const navbar2 = document.getElementsByClassName("navbar2");
-    navbar1[0].addEventListener('touchstart', (e) =>{
-        document.getElementById("backGround").style.display = "flex";
-        document.getElementById("backGround").style.transform = "translate(-100%, 0)";
-        navbar1[0].style.transform = "translate(-300%, 0)";
-        navbar2[0].style.transform = "translate(-300%, 0)";
-      
-        document.getElementsByClassName("reclame")[0].style.display = "inline-block";
-        document.getElementsByClassName("reclame")[0].style.padding = "50%;";
-
+    let nav1_touched = false;
+    let nav2_touched = false;
+    navbar1[0].addEventListener('click', (e) =>{
+        if(nav1_touched == false){
+            if (nav2_touched == true){
+                document.getElementsByClassName("tipuri-meniuri")[0].style.display = "none";
+            }
+            document.getElementById("backGround").style.display = "flex";
+            document.getElementById("backGround").style.backgroundColor = "#049a86";
+            document.getElementById("backGround").style.transform = "translate(-100%, 0)";
+            navbar1[0].style.transform = "translate(-300%, 0)";
+            navbar2[0].style.transform = "translate(-300%, 0)";
+            document.getElementsByClassName("reclame")[0].style.display = "inline-block";
+            nav1_touched = true;
+        }
+        else{
+            navbar1[0].style.transform = "translate(0%)";
+            navbar2[0].style.transform = "translate(0%)";
+            document.getElementById("backGround").style.display = "none";
+            document.getElementsByClassName("reclame")[0].style.display = "none";
+            nav1_touched = false;
+        }
+    });
+    navbar2[0].addEventListener('click', (e) =>{
+        if(nav2_touched == false){
+            if (nav1_touched == true){
+                document.getElementsByClassName("reclame")[0].style.display = "none";
+            }
+            document.getElementById("backGround").style.display = "flex";
+            document.getElementById("backGround").style.backgroundColor = "#d04f4c";
+            document.getElementById("backGround").style.transform = "translate(-100%, 0)";
+            navbar1[0].style.transform = "translate(-300%, 0)";
+            navbar2[0].style.transform = "translate(-300%, 0)";
+            document.getElementsByClassName("tipuri-meniuri")[0].style.display = "inline-block";
+            nav2_touched = true;
+        }
+        else{
+            navbar1[0].style.transform = "translate(0%)";
+            navbar2[0].style.transform = "translate(0%)";
+            document.getElementById("backGround").style.display = "none";
+            document.getElementsByClassName("tipuri-meniuri")[0].style.display = "none";
+            nav2_touched = false;
+        }
     });
 }
 
