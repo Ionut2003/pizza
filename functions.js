@@ -9,7 +9,7 @@ const butonCos =document.getElementById("cos-cumparaturi-icon");
 const cosCumparaturi = document.getElementById("cos-cumparaturi");
 const inchideCos = document.getElementById("inchide-cos");
 const view = document.getElementById("view");
-const mediaQuery = window.matchMedia('(max-width: 600px)')
+const mediaQuery = window.matchMedia('(max-width: 600px)');
 const comanda = document.getElementById("comanda");
 let btns={};
 let firstLoad = true;
@@ -40,6 +40,22 @@ function plaseza_comanda(lista=[]){
 }
 
 let produseInCos = [];
+
+if (mediaQuery.matches) {
+    const navbar1 = document.getElementsByClassName("navbar1");
+    const navbar2 = document.getElementsByClassName("navbar2");
+    navbar1[0].addEventListener('touchstart', (e) =>{
+        document.getElementById("backGround").style.display = "flex";
+        document.getElementById("backGround").style.transform = "translate(-100%, 0)";
+        navbar1[0].style.transform = "translate(-300%, 0)";
+        navbar2[0].style.transform = "translate(-300%, 0)";
+      
+        document.getElementsByClassName("reclame")[0].style.display = "inline-block";
+        document.getElementsByClassName("reclame")[0].style.padding = "50%;";
+
+    });
+}
+
 
 if(firstLoad)
 {
