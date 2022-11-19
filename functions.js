@@ -31,13 +31,9 @@ class Produs{
 
 }
 
-function plaseza_comanda(lista=[]){
-    let fso = CreateObject("Scripting.FileSystemObject");
-    let a =fso.CreateTextFile("./comanda.txt",true);
-    for(let i =0;i<=lista.length;i++)
-    a.Close();
 
-}
+
+
 
 let produseInCos = [];
 
@@ -68,9 +64,6 @@ if(firstLoad)
 }
 
 
-comanda.style.left = cosCumparaturi.style.left + cosCumparaturi.style.width/2 +"vw";
-comanda.style.top= cosCumparaturi.style.top + cosCumparaturi.style.height+"vh";
-
 
 butonCos.addEventListener('click',(e)=>{
     cosCumparaturi.style.display="flex";
@@ -87,7 +80,7 @@ inchideCos.addEventListener('click',(e)=>{
 })
 
 comanda.addEventListener('click',(e)=>{
-    plaseza_comanda(produseInCos);
+    cosCumparaturi.innerHTML="";
     produseInCos.length=0;
     cosCumparaturi.style.display="none";
     butonCos.style.display="flex";
@@ -192,9 +185,13 @@ window.onclick = function(event){
                     
                     <div class="produs">
                     <img src="${produs.src}" class="img"> 
-                    ${produs.nume}     
-                    ${produs.pret}
                     <div>
+                    ${produs.nume}
+                    </div>
+                    <div>     
+                    ${produs.pret}
+                    </div>
+                    </div>
                     
                     `;
                     $("#cos-cumparaturi").append(cartItem);
