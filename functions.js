@@ -14,7 +14,7 @@ const comanda = document.getElementById("comanda");
 let btns={};
 let firstLoad = true;
 let textCopied = false;
-let nrTelefon = "2222.222.222";
+let nrTelefon = "222.222.2222";
 let valoareComanda = 0;
 
 class Produs{
@@ -92,9 +92,6 @@ if(firstLoad)
     $("#view").load("./pagini/pizza.html");
     firstLoad = false;
     btns = document.getElementsByClassName("container");
-    
-    
-    
 }
 
 
