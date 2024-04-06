@@ -89,18 +89,49 @@ buttons[4].addEventListener('click', (e) =>{
 // MOBILE VERSION 
 
 if(mediaQuery.matches) {
-    document.getElementById("menu_mobile").appendChild(document.getElementsByClassName("navbar1")[0]);
-    document.getElementById("menu_mobile").appendChild(document.getElementsByClassName("navbar2")[0]);
-
+    let line = document.getElementsByClassName("line");
+    let opened = false;
     // CLICK MENU EVENT 
     document.getElementById("menu_mobile").addEventListener("click", function(event) {
-        for(let i = 0; i < 3; i++) { //making the lines disapear
-            document.getElementsByClassName("line")[i].style.display = "none";
+        if(!opened) {
+            line[1].style.transform = "scale(0)";
+            line[1].style.transition = "transform 1s ease";
+            line[0].style.transformOrigin = "top left";
+            line[0].style.transform = "rotate(45deg)";
+            line[0].style.transition = "transform 1s ease";
+            line[2].style.transformOrigin = "bottom left";
+            line[2].style.transform = "rotate(-45deg)";
+            line[2].style.transition = "transform 1s ease";
+            document.getElementById("menu_mobile").style.transform = "translateX(-55vw)";
+            document.getElementById("menu_mobile").style.transition = "transform 1s ease";
+            document.getElementById("mobile_navbar").appendChild(navbar1);
+            document.getElementById("mobile_navbar").appendChild(navbar2);
+            navbar1.style.display = "flex";
+            navbar2.style.display = "flex";
+            document.getElementById("mobile_navbar").style.transform = "translateX(-55vw)";
+            document.getElementById("mobile_navbar").style.transition = "transform 1s ease";
+            opened = true;
         }
-        document.getElementById("menu_mobile").style.width = "auto";
-        document.getElementById("menu_mobile").style.height = "auto";
-        navbar1.style.display = "flex";
-        navbar2.style.display = "flex";
+        else {
+            document.getElementById("menu_mobile").style.transform = "translateX(0)";
+            document.getElementById("menu_mobile").style.transition = "transform 1s ease";
+            document.getElementById("mobile_navbar").style.transform = "translateX(0)";
+            document.getElementById("mobile_navbar").style.transition = "transform 1s ease";
+            line[1].style.transform = "scale(1)";
+            line[1].style.transition = "transform 1s ease";
+            line[0].style.transform = "rotate(0)";
+            line[0].style.transition = "transform 1s ease";
+            line[2].style.transform = "rotate(0)";
+            line[2].style.transition = "transform 1s ease";
+            setTimeout(function() {
+                navbar1.style.display = "none";
+                navbar2.style.display = "none";
+            }, 1000);
+            opened = false;
+        }
+        
+        
+        
         
     });
 }
