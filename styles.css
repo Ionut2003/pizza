@@ -4,7 +4,7 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: 'Roboto', sans-serif;
-  padding: 0
+  padding: 0;
 }
 
 body {
@@ -79,12 +79,6 @@ body {
   align-items: center;
 }
 
-
-.tipuri-meniuri {
-  display: flex;
-  height: 100%;
- 
-}
 .button {
         color: orange;
         font-size: var(--NAV-FONT);
@@ -110,12 +104,11 @@ body {
   transform-origin: bottom left;
 }
 
-
-.despre-noi, .info-utile, .vouchere {
-    flex: auto;
-    display: inline-block;
-    text-align: center;
+.nav_button:last-child {
+  color: red;
 }
+
+
 
 /* MAIN SECTION */
 .main {
@@ -193,6 +186,7 @@ body {
   border-radius: 30px;
   background-color: rgb(230, 209, 141);
   cursor: pointer;
+  scale: 1.1;
 }
 
 #clipboardNr{

@@ -128,14 +128,15 @@ if(mediaQuery.matches) {
                 navbar2.style.display = "none";
             }, 1000);
             opened = false;
-        }
-        
-        
-        
-        
+        }     
     });
 }
 
+// NR-TELEFON COPIED EVENT 
+
+telefon.addEventListener('click',(e)=>{ 
+    navigator.clipboard.writeText(nrTelefon);
+})
 
 
 
@@ -155,11 +156,7 @@ if(mediaQuery.matches) {
 // })
 
 
-// NR-TELEFON COPIED EVENT 
 
-telefon.addEventListener('click',(e)=>{ 
-    navigator.clipboard.writeText(nrTelefon);
-})
 
 // window.onclick = function(event){
 //     if(event.target !=feReclamatii && event.target != document.getElementById("fname")
