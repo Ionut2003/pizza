@@ -10,38 +10,71 @@
       <div class = "container">
         <img src = "poze/poze-desert/download_1.jpg" class="pizza"></img>
         <div class = "pizza_name">Tort de frisca</div>
-        <div class = "pret">40 LEI</div>
+        <div class="container_pret_adaugat">
+          <p class="adaugatInCos">Adaugat in cos</p>
+          <div class = "pret">40 LEI</div>
+        </div>
       </div>
       <div class = "container">
         <img src = "poze/poze-desert/download_2.jpg" class="pizza"></img>
         <div class = "pizza_name">Prajituri cu afine</div>
-        <div class = "pret">12 LEI</div>
+        <div class="container_pret_adaugat">
+          <p class="adaugatInCos">Adaugat in cos</p>
+          <div class = "pret">12 LEI</div>
+        </div>
       </div> 
       <div class = "container">
         <img src = "poze/poze-desert/download_3.jpg" class="pizza"></img>
         <div class = "pizza_name">Mini prajituri</div>
-        <div class = "pret">12 LEI</div>
+        <div class="container_pret_adaugat">
+          <p class="adaugatInCos">Adaugat in cos</p>
+          <div class = "pret">12 LEI</div>
+        </div>
       </div>
       <div class = "container">
         <img src = "poze/poze-desert/download.jpg" class="pizza"></img>
         <div class = "pizza_name">Musuroi</div>
-        <div class = "pret">15 LEI</div>
+        <div class="container_pret_adaugat">
+          <p class="adaugatInCos">Adaugat in cos</p>
+          <div class = "pret">15 LEI</div>
+        </div>
       </div>
       <div class = "container">
         <img src = "poze/poze-desert/images_1.jpg" class="pizza"></img>
         <div class = "pizza_name">Prajituri Michael Jackson</div>
-        <div class = "pret">10 LEI</div>
+        <div class="container_pret_adaugat">
+          <p class="adaugatInCos">Adaugat in cos</p>
+          <div class = "pret">10 LEI</div>
+        </div>
       </div>
       <div class = "container">
         <img src = "poze/poze-desert/images_2.jpg" class="pizza"></img>
         <div class = "pizza_name">Eclere Belgiene</div>
-        <div class = "pret">20 LEI</div>
+        <div class="container_pret_adaugat">
+          <p class="adaugatInCos">Adaugat in cos</p>
+          <div class = "pret">20 LEI</div>
+        </div>
       </div>
       <div class = "container">
         <img src = "poze/poze-desert/images_3.jpg" class="pizza"></img>
         <div class = "pizza_name">Prajitura cu Gelatina</div>
-        <div class = "pret">20 LEI</div>
+        <div class="container_pret_adaugat">
+          <p class="adaugatInCos">Adaugat in cos</p>
+          <div class = "pret">20 LEI</div>
+        </div>
       </div>  
     </div>
+    <script>
+      var container = document.getElementsByClassName("container");
+      for(let i = 0; i < container.length; i++) {
+        if(sessionStorage.getItem("desert " + i)) {
+          document.getElementsByClassName("adaugatInCos")[i].style.color = "rgb(0, 255, 0)";
+        }
+          container[i].addEventListener("click", function() {
+            document.getElementsByClassName("adaugatInCos")[i].style.color = "rgb(0, 255, 0)";
+            sessionStorage.setItem("desert " + i, true);
+          });
+      }
+  </script>
   </body>
 </html>

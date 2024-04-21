@@ -1,21 +1,11 @@
 const buttons = document.getElementsByClassName("button");
 const telefon = document.getElementById("nr-telefon");
-const reclamatii = document.getElementsByClassName("reclamatii");
-const contact = document.getElementsByClassName("contact");
-const feReclamatii = document.getElementById("fereastraReclamatii");
-const modal = document.getElementById("modal");
 const butonCos =document.getElementById("cos-cumparaturi-icon");
 const inchideCos = document.getElementById("inchide");
-const view = document.getElementById("view");
-const comanda = document.getElementById("comanda");
-let firstLoad = true;
-let textCopied = false;
-let nrTelefon = "222.222.2222";
-let valoareComanda = 0;
-let produseInCos = [];
 let mediaQuery = window.matchMedia("(max-width: 600px)");
 const navbar1 = document.getElementsByClassName("navbar1")[0];
 const navbar2 = document.getElementsByClassName("navbar2")[0];
+
 
 $("#view").load("./pagini/pizza.html");
 
@@ -24,6 +14,13 @@ $("#view").load("./pagini/pizza.html");
 butonCos.addEventListener("click", function() {
     document.getElementById("cos_container").style.display = "grid";
 });
+
+inchideCos.addEventListener("click", function() {
+    document.getElementById("cos_container").style.display = "none";
+})
+
+
+
 
 
 // NAVBAR 2 EVENTS
@@ -101,6 +98,13 @@ if(mediaQuery.matches) {
 
 // NR-TELEFON COPIED EVENT 
 
-telefon.addEventListener('click',(e)=>{ 
-    navigator.clipboard.writeText(nrTelefon);
+telefon.addEventListener('click',(event)=>{ 
+    const phone_clipboard = document.getElementById("phone_clipboard");
+    navigator.clipboard.writeText("222.222.2222");
+    phone_clipboard.style.display = "block";
+    phone_clipboard.style.left = event.clientX + 5 + "px";
+    phone_clipboard.style.top = event.clientY + 5 + "px";
+    setTimeout(function() {
+        phone_clipboard.style.display = "none";
+    }, 500);
 })
