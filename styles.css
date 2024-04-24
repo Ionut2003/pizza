@@ -335,6 +335,8 @@ a:link {
   width: 100vw;
   height: 100vh;
 }
+
+/* COS DE CUMPARATURI SECTION */
 #cos-cumparaturi-icon {
   top: 40vh;
   right:5px;
@@ -393,7 +395,14 @@ a:link {
   height: 70vh;
   border: 3px solid black;
   border-radius: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+  overflow: auto;
 }
+
+
 
 
 

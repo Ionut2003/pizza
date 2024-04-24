@@ -1,11 +1,10 @@
-const buttons = document.getElementsByClassName("button");
-const telefon = document.getElementById("nr-telefon");
-const butonCos =document.getElementById("cos-cumparaturi-icon");
-const inchideCos = document.getElementById("inchide");
-let mediaQuery = window.matchMedia("(max-width: 600px)");
-const navbar1 = document.getElementsByClassName("navbar1")[0];
-const navbar2 = document.getElementsByClassName("navbar2")[0];
-
+var buttons = document.getElementsByClassName("button");
+var telefon = document.getElementById("nr-telefon");
+var butonCos =document.getElementById("cos-cumparaturi-icon");
+var inchideCos = document.getElementById("inchide");
+var mediaQuery = window.matchMedia("(max-width: 600px)");
+var navbar1 = document.getElementsByClassName("navbar1")[0];
+var navbar2 = document.getElementsByClassName("navbar2")[0];
 
 $("#view").load("./pagini/pizza.html");
 
@@ -23,12 +22,13 @@ inchideCos.addEventListener("click", function() {
 
 
 
+
+
 // NAVBAR 2 EVENTS
 
 
 buttons[0].addEventListener('click', (e) =>{
     $("#view").load("./pagini/pizza.html"); 
-    
 
 })
         

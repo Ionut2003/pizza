@@ -65,16 +65,17 @@
       </div>  
     </div>
     <script>
-      var container = document.getElementsByClassName("container");
-      for(let i = 0; i < container.length; i++) {
+      var desert_container = document.getElementsByClassName("container");
+      for(let i = 0; i < desert_container.length; i++) {
         if(sessionStorage.getItem("desert " + i)) {
           document.getElementsByClassName("adaugatInCos")[i].style.color = "rgb(0, 255, 0)";
         }
-          container[i].addEventListener("click", function() {
+          desert_container[i].addEventListener("click", function() {
             document.getElementsByClassName("adaugatInCos")[i].style.color = "rgb(0, 255, 0)";
             sessionStorage.setItem("desert " + i, true);
           });
       }
   </script>
+  <script src = "/pizza/functions.js"></script>
   </body>
 </html>
