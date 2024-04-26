@@ -73,10 +73,25 @@
           salate_container[i].addEventListener("click", function() {
             document.getElementsByClassName("adaugatInCos")[i].style.color = "rgb(0, 255, 0)";
             sessionStorage.setItem("salate " + i, true);
+            var cloned_salate_container = document.createElement("div"); // creating clone
+              cloned_salate_container.innerHTML = pizza_container[i].innerHTML;
+              cloned_salate_container.querySelector(".container_pret_adaugat").remove(); // removing element
+              //modifying clone styling
+              cloned_salate_container.querySelector(".pizza_name").style.color = "black";
+              cloned_salate_container.style.display = "flex";
+              cloned_salate_container.style.flexDirection = "column";
+              cloned_salate_container.style.alignItems = "center";
+              cloned_salate_container.querySelector(".pizza").style.width = "100px";
+              cloned_salate_container.querySelector(".pizza").style.height = "50px";
+              cloned_salate_container.style.height = "fit-content";
+              cloned_salate_container.style.width = "fit-content";
+              cloned_salate_container.querySelector(".pizza_name").style.fontSize = "14px";
+              cloned_salate_container.querySelector(".pizza_name").style.width = "fit-content";
+              //append clone to comenzi element
+              document.getElementById("comenzi").appendChild(cloned_salate_container);
           });
       }
       
   </script>
-  <script src = "/pizza/functions.js"></script>
   </body>
 </html>

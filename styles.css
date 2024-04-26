@@ -169,6 +169,8 @@ body {
   height: auto;
   margin-top: 50px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .pizza_name{
@@ -250,7 +252,7 @@ body {
   background-color: #a3a866;
   font-size: 1rem;
   padding: 0.5rem;
-  color: white;
+  color: red;
   
 }
 .input {
@@ -400,7 +402,10 @@ a:link {
   justify-content: space-evenly;
   gap: 10px;
   overflow: auto;
+  padding-top: 30px;
 }
+
+
 
 
 

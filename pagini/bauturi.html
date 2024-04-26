@@ -67,9 +67,24 @@
           bauturi_container[i].addEventListener("click", function() {
             document.getElementsByClassName("adaugatInCos")[i].style.color = "rgb(0, 255, 0)";
             sessionStorage.setItem("bauturi " + i, true);
+            var cloned_bauturi_container = document.createElement("div"); // creating clone
+              cloned_bauturi_container.innerHTML = pizza_container[i].innerHTML;
+              cloned_bauturi_container.querySelector(".container_pret_adaugat").remove(); // removing element
+              //modifying clone styling
+              cloned_bauturi_container.querySelector(".pizza_name").style.color = "black";
+              cloned_bauturi_container.style.display = "flex";
+              cloned_bauturi_container.style.flexDirection = "column";
+              cloned_bauturi_container.style.alignItems = "center";
+              cloned_bauturi_container.querySelector(".pizza").style.width = "100px";
+              cloned_bauturi_container.querySelector(".pizza").style.height = "50px";
+              cloned_bauturi_container.style.height = "fit-content";
+              cloned_bauturi_container.style.width = "fit-content";
+              cloned_bauturi_container.querySelector(".pizza_name").style.fontSize = "14px";
+              cloned_bauturi_container.querySelector(".pizza_name").style.width = "fit-content";
+              //append clone to comenzi element
+              document.getElementById("comenzi").appendChild(cloned_bauturi_container);
           });
       }
   </script>
-  <script src = "/pizza/functions.js"></script>
   </body>
 </html>

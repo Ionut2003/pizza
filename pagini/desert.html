@@ -73,9 +73,24 @@
           desert_container[i].addEventListener("click", function() {
             document.getElementsByClassName("adaugatInCos")[i].style.color = "rgb(0, 255, 0)";
             sessionStorage.setItem("desert " + i, true);
+            var cloned_desert_container = document.createElement("div"); // creating clone
+              cloned_desert_container.innerHTML = pizza_container[i].innerHTML;
+              cloned_desert_container.querySelector(".container_pret_adaugat").remove(); // removing element
+              //modifying clone styling
+              cloned_desert_container.querySelector(".pizza_name").style.color = "black";
+              cloned_desert_container.style.display = "flex";
+              cloned_desert_container.style.flexDirection = "column";
+              cloned_desert_container.style.alignItems = "center";
+              cloned_desert_container.querySelector(".pizza").style.width = "100px";
+              cloned_desert_container.querySelector(".pizza").style.height = "50px";
+              cloned_desert_container.style.height = "fit-content";
+              cloned_desert_container.style.width = "fit-content";
+              cloned_desert_container.querySelector(".pizza_name").style.fontSize = "14px";
+              cloned_desert_container.querySelector(".pizza_name").style.width = "fit-content";
+              //append clone to comenzi element
+              document.getElementById("comenzi").appendChild(cloned_desert_container);
           });
       }
   </script>
-  <script src = "/pizza/functions.js"></script>
   </body>
 </html>

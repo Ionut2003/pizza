@@ -65,27 +65,30 @@
       </div>  
     </div>
     <script>
-      var pizza_container = document.getElementsByClassName("container");
+      var pizza_container = document.getElementsByClassName("container"); // pizza container variable
         for(let i = 0; i < pizza_container.length; i++) {
           if(sessionStorage.getItem("pizza " + i)) {
             document.getElementsByClassName("adaugatInCos")[i].style.color = "rgb(0, 255, 0)";
-          }
+          } // verifying session storage and adding text to each element
             pizza_container[i].addEventListener("click", function() {
               document.getElementsByClassName("adaugatInCos")[i].style.color = "rgb(0, 255, 0)";
               sessionStorage.setItem("pizza " + i, true);
-              let cloned_pizza_container = pizza_container[i].cloneNode(true);
-              cloned_pizza_container.querySelector(".container_pret_adaugat").style.display = "none";
+              var cloned_pizza_container = document.createElement("div"); // creating clone
+              cloned_pizza_container.innerHTML = pizza_container[i].innerHTML;
+              cloned_pizza_container.querySelector(".container_pret_adaugat").remove(); // removing element
+              //modifying clone styling
               cloned_pizza_container.querySelector(".pizza_name").style.color = "black";
               cloned_pizza_container.querySelector(".pizza").style.width = "100px";
               cloned_pizza_container.querySelector(".pizza").style.height = "50px";
+              cloned_pizza_container.style.display = "flex";
+              cloned_pizza_container.style.flexDirection = "column";
+              cloned_pizza_container.style.justifyContent = "center";
               cloned_pizza_container.style.height = "fit-content";
               cloned_pizza_container.style.width = "fit-content";
               cloned_pizza_container.querySelector(".pizza_name").style.fontSize = "14px";
               cloned_pizza_container.querySelector(".pizza_name").style.width = "fit-content";
+              //append clone to comenzi element
               document.getElementById("comenzi").appendChild(cloned_pizza_container);
-              console.log(pizza_container);
-              
-
             });
         }
     </script>
