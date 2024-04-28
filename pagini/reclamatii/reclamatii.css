@@ -1,0 +1,62 @@
+/* STYLE RESETS */
+* {
+       margin: 0;
+       box-sizing: border-box;
+       scroll-behavior: smooth;
+       font-family: 'Roboto', sans-serif;
+       padding: 0;
+}
+     
+body {
+       background-color: black;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+}
+
+/* RECLAMATIE SECTION */
+
+#reclamatie_header {
+       color: white;
+       text-align: center;
+       margin-top: 10px;
+       
+}
+
+#reclamatie {
+       width: 80%;
+       height: 80%;
+       display: flex;
+       flex-flow: column wrap;
+       border: 2px solid yellow;
+       border-radius: 10px;
+       justify-content: center;
+       gap: 50px;
+}
+#reclamatie_form {
+       display: flex;
+       flex-flow: column wrap;
+       justify-content: center;
+       gap: 15px;
+}
+
+input {
+       padding: 10px;
+       border-radius: 15px;
+}
+
+#username_input, #email_input {
+       background-color: white;
+}
+
+#username_label, #email_label {
+       color: white;
+}
+
+#trimite_input {
+       color: white;
+       background-color: green;
+       font-weight: bold;
+       font-size: 14px;
+}
